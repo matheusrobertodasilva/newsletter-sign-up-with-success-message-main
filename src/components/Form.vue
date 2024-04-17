@@ -12,7 +12,7 @@
             verificarEmail(){
                 if(!this.email.includes("@")){
                     this.mensagemErro = "Valid email required";
-                    this.styleInput = " outline-none border-Tomato bg-red-200 text-Tomato"
+                    this.styleInput = " outline-none border-Tomato bg-red-200 placeholder:text-Tomato"
                 } else {
                     this.mensagemErro = ""
                     this.styleInput = ""
