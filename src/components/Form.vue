@@ -5,7 +5,6 @@
                 email: "",
                 mensagemErro:"",
                 styleInput:"",
-                caminho:""
             }
         },
         methods:{
@@ -16,14 +15,10 @@
                 } else {
                     this.mensagemErro = ""
                     this.styleInput = ""
-                    this.caminho = "/finished"
                     localStorage.setItem("email",this.email)
-                    window.location.href = '/finished'
+                    window.location.href = "/finished"
                 }
             },
-            mudarPagina(){
-                window.location.href = '/finished'
-            }
         }
     }
 </script>
@@ -58,9 +53,13 @@
                             class="border-2 p-3 rounded-xl mt-2 font-normal text-[16px] desabled:border"
                             :class="styleInput"
                         >
-                        <button
-                        @click.prevent = "verificarEmail"
-                        class="text-center my-5 bg-Charcoal-Grey text-white p-3 rounded-lg lg:hover:bg-Tomato lg:hover:duration-300 lg:hover:shadow-lg lg:hover:shadow-Tomato ">Subscribe to monthly newsletter</button>
+                        <input 
+                        type="submit"
+                        value="Subscribe to monthly newsletter"
+                        @click.prevent= "verificarEmail"
+                        class="text-center my-5 bg-Charcoal-Grey text-white p-3 rounded-lg lg:hover:bg-Tomato lg:hover:duration-300 lg:hover:shadow-lg lg:hover:shadow-Tomato"
+                    
+                        >
                     </form>
                 </div>
             </div>
