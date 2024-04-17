@@ -5,6 +5,7 @@
                 email: "",
                 mensagemErro:"",
                 styleInput:"",
+                botao:""
             }
         },
         watch:{
@@ -17,13 +18,16 @@
                 if(!this.email.includes("@")){
                     this.mensagemErro = "Valid email required";
                     this.styleInput = " outline-none border-Tomato bg-red-200 placeholder:text-Tomato"
+                    this.botao = "pointer-events-none";
                 } else if(!this.email.includes(".com")){
                     this.mensagemErro = "Valid email required";
                     this.styleInput = " outline-none border-Tomato bg-red-200 placeholder:text-Tomato"
+                    this.botao = "pointer-events-none";
                 }else {
                     this.mensagemErro = ""
                     this.styleInput = ""
                     localStorage.setItem("email",this.email)
+                    this.botao = "pointer-events-auto";
                 }
             },
         }
@@ -63,6 +67,7 @@
                         <router-link
                         to="/finished"
                         class=" text-center my-5 bg-Charcoal-Grey text-white p-3 rounded-lg lg:hover:bg-Tomato lg:hover:duration-300 lg:hover:shadow-lg lg:hover:shadow-Tomato"
+                        :class="botao"
                         >Subscribe to monthly newsletter</router-link>
                     </form>
                 </div>
