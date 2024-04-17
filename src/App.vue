@@ -1,9 +1,10 @@
 <script setup>
   import Form from './components/Form.vue';
+  import Finished from './components/Finished.vue';
 </script>
 
 <template>
-  <Form/>
+  <Finished/>
 </template>
 
 <style scoped>
