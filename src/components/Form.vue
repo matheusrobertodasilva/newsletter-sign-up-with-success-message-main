@@ -5,7 +5,7 @@
                 email: "",
                 mensagemErro:"",
                 styleInput:"",
-                botao:"pointer-events-none"
+                botao:"pointer-events-none opacity-80"
             }
         },
         watch:{
@@ -26,7 +26,7 @@
                     this.mensagemErro = ""
                     this.styleInput = ""
                     localStorage.setItem("email",this.email)
-                    this.botao = "pointer-events-auto";
+                    this.botao = "pointer-events-auto opacity-100";
                 }
             },
         }
