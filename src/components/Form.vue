@@ -8,9 +8,6 @@
                 caminho:""
             }
         },
-        watch:{
-
-        },
         methods:{
             verificarEmail(){
                 if(!this.email.includes("@")){
@@ -38,9 +35,9 @@
             <img src="/src/assets/images/illustration-sign-up-desktop.svg" alt="" class="hidden lg:block h-[60vh] ml-8">
             <div class="lg:w-[25vw] lg:mx-5">
                 <div class="px-5 py-10 lg:py-0 lg:px-0">
-                    <h1 class="text-4xl lg:text-[58px] font-bold">Stay updated!</h1>
+                    <h1 class="text-4xl lg:text-[50px] font-bold">Stay updated!</h1>
                     <p class="my-5 lg:my-8">Join 60,000+ product managers receiving monthly updates on:</p>
-                    <ul class="ml-7 space-y-3 list-image-[url(src/assets/images/icon-list.svg)]">
+                    <ul class="ml-7 space-y-3 list-image-[url(/src/assets/images/icon-list.svg)]">
                         <li class="before:mr-2">Product discovery and building what matters</li>
                         <li class="before:mr-2">Measuring to ensure updates are a success</li>
                         <li class="before:mr-2">And much more!</li>
