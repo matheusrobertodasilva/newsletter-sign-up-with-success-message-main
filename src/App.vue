@@ -1,12 +1,3 @@
-<script setup>
-  import Form from './components/Form.vue';
-  import Finished from './components/Finished.vue';
-</script>
-
 <template>
-  <Finished/>
+  <router-view></router-view>
 </template>
-
-<style scoped>
-
-</style>

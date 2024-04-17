@@ -2,7 +2,7 @@
     export default{
         data(){
             return{
-                email:"ash@loremcompany.com"
+                email:localStorage.getItem('email')
             }
         }
     }
@@ -18,7 +18,7 @@
                 <h1 class="text-[40px] font-bold leading-[2.5rem] lg:text-[38px]">Thanks for subscribing!</h1>
                 <p class="my-7">A confirmation email has been sent to <span class="text-Dark-Slate-Grey font-bold">{{ email }}</span>. Please open it and click the button inside to confirm your subscription.</p>
             </div>
-            <button class="p-4 bg-Charcoal-Grey text-White rounded-lg lg:p-3 lg:hover:bg-Tomato lg:hover:shadow-lg lg:hover:shadow-Tomato ">Dismiss message </button>
+            <router-link to="/" class=" text-center p-4 bg-Charcoal-Grey text-White rounded-lg lg:p-3 lg:hover:bg-Tomato lg:hover:shadow-lg lg:hover:shadow-Tomato ">Dismiss message </router-link>
         </div>
     </section>
 </template>
