@@ -7,16 +7,23 @@
                 styleInput:"",
             }
         },
+        watch:{
+            email(){
+                this.verificarEmail()
+            }
+        },
         methods:{
             verificarEmail(){
                 if(!this.email.includes("@")){
                     this.mensagemErro = "Valid email required";
                     this.styleInput = " outline-none border-Tomato bg-red-200 placeholder:text-Tomato"
-                } else {
+                } else if(!this.email.includes(".com")){
+                    this.mensagemErro = "Valid email required";
+                    this.styleInput = " outline-none border-Tomato bg-red-200 placeholder:text-Tomato"
+                }else {
                     this.mensagemErro = ""
                     this.styleInput = ""
                     localStorage.setItem("email",this.email)
-                    window.location.href = "/finished"
                 }
             },
         }
@@ -50,16 +57,13 @@
                             type="text" 
                             placeholder="email@company.com" 
                             v-model="email" 
-                            class="border-2 p-3 rounded-xl mt-2 font-normal text-[16px] desabled:border"
+                            class="border-2 p-3 rounded-xl mt-2 font-normal text-[16px]"
                             :class="styleInput"
                         >
-                        <input 
-                        type="submit"
-                        value="Subscribe to monthly newsletter"
-                        @click.prevent= "verificarEmail"
-                        class="text-center my-5 bg-Charcoal-Grey text-white p-3 rounded-lg lg:hover:bg-Tomato lg:hover:duration-300 lg:hover:shadow-lg lg:hover:shadow-Tomato"
-                    
-                        >
+                        <router-link
+                        to="/finished"
+                        class=" text-center my-5 bg-Charcoal-Grey text-white p-3 rounded-lg lg:hover:bg-Tomato lg:hover:duration-300 lg:hover:shadow-lg lg:hover:shadow-Tomato"
+                        >Subscribe to monthly newsletter</router-link>
                     </form>
                 </div>
             </div>
