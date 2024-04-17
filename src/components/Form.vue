@@ -5,7 +5,7 @@
                 email: "",
                 mensagemErro:"",
                 styleInput:"",
-                botao:""
+                botao:"pointer-events-none"
             }
         },
         watch:{
@@ -18,11 +18,10 @@
                 if(!this.email.includes("@")){
                     this.mensagemErro = "Valid email required";
                     this.styleInput = " outline-none border-Tomato bg-red-200 placeholder:text-Tomato"
-                    this.botao = "pointer-events-none";
+                    
                 } else if(!this.email.includes(".com")){
                     this.mensagemErro = "Valid email required";
                     this.styleInput = " outline-none border-Tomato bg-red-200 placeholder:text-Tomato"
-                    this.botao = "pointer-events-none";
                 }else {
                     this.mensagemErro = ""
                     this.styleInput = ""
